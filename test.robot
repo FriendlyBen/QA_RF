@@ -110,8 +110,9 @@ Switch To Financial
         Click Element    //p[contains(@class,"typography__Text") and text()="Financial"]
 
 Check Swap Charge
-     ${expected_swap}=    Evaluate    100*100000*10*0.5 
-     Element Text Should Be    //*[text()="USD"]//preceding-sibling::div     ${expected_swap}
+    ${expected_swap}=    Evaluate    100*100000*10*0.5 
+    ${formatted}     Evaluate    '{:,.0f}'.format(${expected_swap})
+    Element Text Should Be    //*[text()="USD"]//preceding-sibling::div     ${formatted}
 
 *** Test Cases ***
 #check all trade types and paltforms exist in the main page
