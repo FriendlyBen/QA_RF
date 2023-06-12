@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.6 on linux)" generated="20230612 18:00:50.494" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcases" source="/home/bentley/QA_RF/Project1/testcases.robot">
+<test id="s1-t1" name="API tokens created can be copied by clicking the copy icon." line="143">
+<kw name="User Log in" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${home_url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230612 18:00:50.577" level="INFO">Opening browser 'Chrome' to base url 'https://app.deriv.com/account/api-token'.</msg>
+<status status="PASS" starttime="20230612 18:00:50.577" endtime="20230612 18:00:54.441"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1280</arg>
+<arg>1024</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20230612 18:00:54.441" endtime="20230612 18:00:54.550"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230612 18:00:54.550" endtime="20230612 18:00:54.568"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email}</arg>
+<arg>bentley@besquare.com.my</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 18:00:54.569" level="INFO">Typing text 'bentley@besquare.com.my' into text field '//input[@id="txtEmail"]'.</msg>
+<status status="PASS" starttime="20230612 18:00:54.568" endtime="20230612 18:00:54.626"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>Bentley123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 18:00:54.627" level="INFO">Typing password into text field '//input[@id="txtPass"]'.</msg>
+<msg timestamp="20230612 18:00:54.650" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230612 18:00:54.677" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230612 18:00:54.626" endtime="20230612 18:00:54.677"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 18:00:54.677" level="INFO">Clicking element '//button[@name="login"]'.</msg>
+<status status="PASS" starttime="20230612 18:00:54.677" endtime="20230612 18:00:56.549"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[text()="Settings"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230612 18:00:56.549" endtime="20230612 18:00:58.219"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230612 18:00:59.220" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230612 18:00:58.220" endtime="20230612 18:00:59.220"/>
+</kw>
+<status status="PASS" starttime="20230612 18:00:50.576" endtime="20230612 18:00:59.220"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${read_box}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230612 18:00:59.220" endtime="20230612 18:00:59.240"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${read_box}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 18:00:59.241" level="INFO">Clicking element '//input[@name="read"]//parent::label'.</msg>
+<status status="PASS" starttime="20230612 18:00:59.240" endtime="20230612 18:00:59.363"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${token_name_input}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230612 18:00:59.363" endtime="20230612 18:00:59.408"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${token_name_input}</arg>
+<arg>abc123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230612 18:00:59.409" level="INFO">Typing text 'abc123' into text field '//input[@name="token_name"]'.</msg>
+<status status="PASS" starttime="20230612 18:00:59.409" endtime="20230612 18:00:59.683"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${create_btn}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230612 18:00:59.683" endtime="20230612 18:00:59.724"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${create_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 18:00:59.724" level="INFO">Clicking element '//button[@class="dc-btn dc-btn__effect dc-btn--primary dc-btn__large dc-btn__button-group da-api-token__button"]'.</msg>
+<status status="PASS" starttime="20230612 18:00:59.724" endtime="20230612 18:00:59.814"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230612 18:01:02.815" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230612 18:00:59.814" endtime="20230612 18:01:02.815"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//span[text()="testing_123"]</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230612 18:01:02.815" endtime="20230612 18:01:02.834"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>//span[text()="testing_123"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230612 18:01:02.834" endtime="20230612 18:01:03.114"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${copy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230612 18:01:03.114" level="INFO">Clicking element '//span[text()="abc123"]/ancestor::tr//svg[contains(@class, "dc-clipboard")]/parent::i'.</msg>
+<msg timestamp="20230612 18:01:03.216" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230612 18:01:03.216" level="FAIL">Element with locator '//span[text()="abc123"]/ancestor::tr//svg[contains(@class, "dc-clipboard")]/parent::i' not found.</msg>
+<status status="FAIL" starttime="20230612 18:01:03.114" endtime="20230612 18:01:03.217"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${copy}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230612 18:01:03.217" endtime="20230612 18:01:03.217"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${token_name_input}</arg>
+<arg>CTRL+v</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20230612 18:01:03.217" endtime="20230612 18:01:03.217"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${create_btn}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230612 18:01:03.217" endtime="20230612 18:01:03.217"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230612 18:01:03.217" endtime="20230612 18:01:03.217"/>
+</kw>
+<status status="FAIL" starttime="20230612 18:00:50.576" endtime="20230612 18:01:03.218">Element with locator '//span[text()="abc123"]/ancestor::tr//svg[contains(@class, "dc-clipboard")]/parent::i' not found.</status>
+</test>
+<doc>Project 1 (Automation on API token page)</doc>
+<status status="FAIL" starttime="20230612 18:00:50.494" endtime="20230612 18:01:03.218"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcases">Testcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
