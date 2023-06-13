@@ -36,8 +36,8 @@ User Log in
     Open Browser    ${home_url}    Chrome
     Set Window Size    1280    1024
     Wait Until Element Is Visible    ${email}
-    Input Text    ${email}    bentley@besquare.com.my
-    Input Password    ${password}    Bentley123
+    Input Text    ${email}    Dummy1
+    Input Password    ${password}    Dummy2
     Click Element    ${login}
     Wait Until Element Is Visible    //*[text()="Settings"]    10
 
