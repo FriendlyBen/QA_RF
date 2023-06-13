@@ -38,9 +38,6 @@ Test Case 3.2
 API tokens are visible by clicking the "show this token" icon.
 
 Test Case 3.3
-Scopes for API tokens are correctly recorded based on inputs from Test Case 1.
-
-Test Case 3.4
 API tokens can be deleted by clicking the 'delete' button.
 
 
