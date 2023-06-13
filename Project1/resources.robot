@@ -1,3 +1,6 @@
+*** Settings ***
+Library    SeleniumLibrary
+
 *** Variables ***
 ${home_url}                 https://app.deriv.com/account/api-token
 ${email}                    //input[@id="txtEmail"]
